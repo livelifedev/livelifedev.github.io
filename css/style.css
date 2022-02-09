@@ -1,502 +1,193 @@
 @import url("https://fonts.googleapis.com/css?family=Fredericka+the+Great|Josefin+Slab:600");
 html {
-  scroll-behavior: smooth; }
-
-.loader {
-  width: 100%;
-  height: 100%;
-  background-color: #1a2930;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10; }
-
-.loader .inner {
-  width: 100%;
-  height: 100%;
-  background: url(../images/icons/preloader.gif) center center no-repeat; }
+  scroll-behavior: smooth;
+}
 
 .wrapper {
-  min-width: 320px; }
+  min-width: 320px;
+}
 
 body {
-  background-color: #1a2930;
+  background-color: #151719;
   font-size: 16px;
   font-family: "Josefin Slab", serif;
-  color: #e5e3df; }
+  color: #e5e3df;
+}
 
 section {
   padding: 100px 0 0 0;
-  margin: 0; }
+  margin: 0;
+}
 
 .max {
-  max-width: 1200px; }
+  max-width: 1200px;
+}
 
 h1 {
   font-family: "Fredericka the Great", cursive;
   font-size: 3.6em;
-  color: #e94716;
+  color: #2666cf;
   font-weight: lighter;
   margin: 0;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 h2 {
   text-align: center;
   font-size: 1.9em;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 h3 {
   font-size: 1.8em;
   margin-bottom: 0;
-  margin-top: 6px; }
+  margin-top: 6px;
+}
 
 p {
-  font-size: 1.2em; }
-
-.flex {
-  display: flex; }
+  font-size: 1.2em;
+}
 
 .title {
+  display: flex;
   width: 100%;
   height: 100vh;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
-  .title div {
-    width: 100%;
-    justify-content: center;
-    margin-top: 40px; }
-    .title div img {
-      width: 25px;
-      align-self: center;
-      padding: 0 10px; }
-    .title div img:hover {
-      transform: scale(1.2); }
-  .title p {
-    font-size: 1.3em;
-    padding-top: 8px;
-    margin: 0;
-    letter-spacing: 1px; }
-  .title .facts {
-    margin-top: 25px; }
-    .title .facts p {
-      position: absolute;
-      text-align: center;
-      font-size: 1em;
-      letter-spacing: 2px;
-      max-width: 800px;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      padding: 10px; }
-      .title .facts p span {
-        color: #e94716; }
-  .title .arrow {
-    text-align: center;
-    margin: 10px 0;
-    position: absolute;
-    bottom: 0; }
-    .title .arrow img {
-      width: 60px; }
-    .title .arrow a {
-      display: block; }
-
-.navbar {
-  z-index: 3;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-  width: 100%;
-  background-color: #e94716;
-  height: 85px;
-  justify-content: center;
-  align-items: center; }
-  .navbar a {
-    font-size: 1.4em;
-    padding: 5px 12px;
-    text-decoration: none;
-    color: inherit; }
-  .navbar a:visited {
-    color: inherit; }
-
-.about .aboutGroup {
-  flex-direction: column;
-  margin: auto;
-  width: 100%; }
-.about .portrait {
-  width: 100%;
-  line-height: 0;
-  background-color: #e94716; }
-  .about .portrait img {
-    width: 100%; }
-.about .content {
-  background-color: #e94716;
-  text-align: justify;
-  padding: 15px; }
-
-.skills {
-  width: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-  .skills h2 {
-    margin-bottom: 10px; }
-  .skills p {
-    width: 90%;
-    margin: 0 auto 20px; }
-  .skills .skillsChart {
-    display: grid;
-    grid-template-areas: "skills bar bar bar" "blank head head head";
-    grid-template-columns: 0 1fr 1fr 1fr;
-    grid-template-rows: min(400px) 1fr; }
-  .skills .skillsChartLevel {
-    grid-area: head;
-    justify-content: space-between;
-    font-size: 1.2em;
-    padding: 10px 5px 0;
-    margin-top: 8px;
-    border-top: 1px solid; }
-  .skills .skillsChartLabel {
-    grid-area: skills;
-    flex-direction: column;
-    grid-column-start: 2;
-    z-index: 1;
-    justify-content: space-around;
-    font-size: 2em;
-    padding-left: 8px; }
-  .skills .skillsChartBar {
-    grid-area: bar;
-    flex-direction: column;
-    justify-content: space-around; }
-    .skills .skillsChartBar .bar {
-      margin: 2px 0;
-      background: #e94716;
-      width: var(--w);
-      --w: 0%;
-      height: 85px;
-      transition: width 0.8s;
-      border-radius: 0 2px 2px 0; }
-  .skills .historyGroup {
-    flex-direction: column;
-    width: 85%;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2em;
-    margin-top: 60px; }
-    .skills .historyGroup .work,
-    .skills .historyGroup .school {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      border: 1px solid;
-      width: 100%;
-      height: 240px;
-      margin-top: 10px;
-      border-radius: 2px; }
-      .skills .historyGroup .work h4,
-      .skills .historyGroup .school h4 {
-        font-size: 1.2em;
-        margin-bottom: 10px;
-        margin-top: 0; }
-      .skills .historyGroup .work ol,
-      .skills .historyGroup .school ol {
-        list-style: none;
-        padding: 0;
-        margin-top: 0; }
-        .skills .historyGroup .work ol li,
-        .skills .historyGroup .school ol li {
-          color: #e94716; }
-          .skills .historyGroup .work ol li span,
-          .skills .historyGroup .school ol li span {
-            color: #e5e3df;
-            font-size: 0.9em;
-            font-style: italic; }
-  .skills .resumeLink {
-    margin-top: 20px;
-    font-size: 1.4em; }
-    .skills .resumeLink a {
-      color: #e94716; }
-    .skills .resumeLink a:visited {
-      color: #e94716; }
-
-.loaded .skillsChartBar .bar:nth-of-type(1) {
-  /*DESIGN*/
-  --w: 70%; }
-
-.loaded .skillsChartBar .bar:nth-of-type(2) {
-  /*HTML*/
-  --w: 75%; }
-
-.loaded .skillsChartBar .bar:nth-of-type(3) {
-  /*CSS*/
-  --w: 70%; }
-
-.loaded .skillsChartBar .bar:nth-of-type(4) {
-  /*JS*/
-  --w: 78%; }
-
-.loaded .skillsChartBar .bar:nth-of-type(5) {
-  /*RUBY*/
-  --w: 75%; }
-
-.gallery .filter {
-  width: 100%;
+  align-items: center;
+}
+.title p {
+  font-size: 1.3em;
+  padding-top: 8px;
+  margin: 0;
+  letter-spacing: 1px;
+}
+.title .arrow {
   text-align: center;
-  margin-bottom: 10px; }
-  .gallery .filter a {
-    display: inline-block;
-    text-decoration: none;
-    color: inherit;
-    border: 1px solid;
-    border-radius: 2px;
-    padding: 6px 0;
-    width: 80px;
-    font-size: 1.2em; }
-.gallery .filter a:hover {
-  background-color: #e5e3df;
-  color: #1a2930; }
+  margin: 10px 0;
+  position: absolute;
+  bottom: 0;
+}
+.title .arrow a {
+  display: block;
+  font-size: 4rem;
+  color: #2666cf;
+  text-decoration: none;
+}
 
 .galleryItems {
   display: grid;
   grid-gap: 5px;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
-  padding: 0 5px; }
-  .galleryItems div {
-    width: 100%;
-    line-height: 0;
-    background-color: #e94716;
-    border-radius: 2px; }
-    .galleryItems div img {
-      width: 100%;
-      height: 100%; }
-    .galleryItems div p {
-      text-align: center;
-      font-size: 1em; }
-      .galleryItems div p a {
-        color: inherit;
-        display: inline-block; }
+  padding: 0 5px;
+}
+.galleryItems div {
+  width: 100%;
+  line-height: 0;
+  background-color: #2666cf;
+  border-radius: 2px;
+}
+.galleryItems div img {
+  width: 100%;
+  height: 100%;
+}
+.galleryItems div p {
+  text-align: center;
+  font-size: 1em;
+}
+.galleryItems div p a {
+  color: inherit;
+  display: inline-block;
+}
 
 .fancybox-caption {
   font-size: 1.4em;
-  padding-bottom: 40px; }
+  padding-bottom: 40px;
+}
 
-.contact .contactGroup {
+.footer {
   width: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-  .contact .contactGroup p span {
-    display: block; }
-.contact .contactMe,
-.contact .contactDetails {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-  height: 240px;
-  background-color: #e94716;
-  margin: 5px 0;
-  padding: 25px;
-  border-radius: 2px; }
-.contact .contactDetails ul {
-  list-style: none;
-  padding: 0 80px 0 0;
-  margin-bottom: 0;
-  font-size: 1.2em; }
-.contact .contactDetails li {
-  display: block;
-  height: 40px; }
-  .contact .contactDetails li a {
-    text-decoration: none;
-    color: inherit; }
-  .contact .contactDetails li img {
-    width: 30px;
-    vertical-align: bottom; }
-.contact .contactDetails li a:hover {
-  color: #1a2930; }
-.contact .contactButton {
-  text-decoration: none;
-  color: inherit;
-  border: thin solid;
-  padding: 20px 40px;
-  border-radius: 2px; }
-.contact .contactButton:hover {
-  background-color: #e5e3df;
-  color: #e94716; }
-
-#footer {
-  width: 100%;
-  text-align: center; }
-
-.hide {
-  display: none; }
+  text-align: center;
+  margin-top: 100px;
+}
 
 /*************** MEDIA QUERIES ***************/
 @media (max-width: 399px) {
   h1 {
-    font-size: 3.2em; }
-
-  .navbar a {
-    font-size: 1.2em; }
-
-  table {
-    padding: 4px;
-    width: 260px; }
-
-  .title .facts {
-    margin-bottom: 80px; } }
+    font-size: 3.2em;
+  }
+}
 @media (min-width: 576px) {
-  table {
-    width: 500px; }
-
-  .about .aboutGroup {
-    width: 85%; }
-
-  .contact .contactMe,
-  .contact .contactDetails {
-    padding: 25px 0; }
-
   .gallery .galleryItems {
-    grid-template-columns: repeat(3, 1fr); }
-
-  .skills {
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-    .skills p {
-      width: 100%;
-      margin: 0 auto 20px; }
-    .skills .skillsChart {
-      width: 80%; }
-    .skills .skillsChartBar .bar {
-      transition: width 1.2s; }
-    .skills .historyGroup {
-      width: 80%; } }
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 @media (min-width: 768px) {
   .gallery .galleryItems {
     grid-template-columns: repeat(3, 1fr);
-    padding: 0 20px; }
+    padding: 0 20px;
+  }
 
   h1 {
-    font-size: 6em; }
+    font-size: 6em;
+  }
 
   h2 {
-    letter-spacing: 4px; }
+    letter-spacing: 4px;
+  }
 
-  .title div img {
-    width: 40px;
-    align-self: center;
-    padding: 0 20px; }
   .title p {
     font-size: 1.7em;
     padding-top: 8px;
     margin: 0;
-    letter-spacing: 6px; }
-
-  .skills .historyGroup {
-    flex-direction: row;
-    width: 100%; }
-    .skills .historyGroup .work,
-    .skills .historyGroup .school {
-      width: 40%;
-      margin: 5px 5px; }
-
-  .about .aboutGroup {
-    flex-direction: row;
-    width: 100%; }
-  .about .portrait {
-    width: 50%; }
-  .about .content {
-    width: 50%; }
-
-  .contact .contactGroup {
-    flex-direction: row; }
-  .contact .contactMe,
-  .contact .contactDetails {
-    width: 40%;
-    margin: 5px 5px;
-    padding: 25px; }
-
-  #footer {
-    margin-top: 60px; } }
+    letter-spacing: 6px;
+  }
+}
 @media (min-width: 992px) {
   body {
-    font-size: 17px; }
+    font-size: 17px;
+  }
 
   .gallery .galleryItems {
-    grid-template-columns: repeat(4, 1fr); }
+    grid-template-columns: repeat(4, 1fr);
+  }
   .gallery .filter a {
     width: 100px;
-    margin-bottom: 2px; } }
+    margin-bottom: 2px;
+  }
+}
 @media (min-width: 1200px) {
   .gallery .galleryItems {
     grid-template-columns: repeat(4, 1fr);
     padding: 0 20px;
     width: 80%;
-    margin: auto; }
+    margin: auto;
+  }
 
   h1 {
-    font-size: 6em; }
+    font-size: 6em;
+  }
 
   h2 {
-    letter-spacing: 4px; }
+    letter-spacing: 4px;
+  }
 
-  .title div img {
-    width: 50px;
-    align-self: center;
-    padding: 0 20px; }
   .title p {
     font-size: 1.6em;
     padding-top: 8px;
     margin: 0;
-    letter-spacing: 6px; }
-
-  .about .aboutGroup {
-    flex-direction: row;
-    justify-content: center;
-    margin: auto;
-    width: 80%; }
-  .about .content p {
-    margin-right: 20px;
-    margin-left: 15px; }
-
-  .skills h2 {
-    margin-bottom: 20px; }
-  .skills p {
-    margin: 0 auto 40px; }
-  .skills .skillsChart {
-    width: 80%;
-    max-width: 1200px; }
-  .skills .skillsChartLevel {
-    font-size: 1.4em;
-    margin-top: 20px; }
-  .skills .skillsChartBar .bar {
-    height: 120px; }
-
-  .contact .contactGroup {
-    flex-direction: row;
-    width: 80%;
-    margin: auto; }
-  .contact .contactMe,
-  .contact .contactDetails {
-    width: 50%;
-    margin: 5px 5px;
-    height: 300px; }
-
-  button {
-    padding: 14px 30px 10px; }
-
-  #footer {
-    margin-top: 80px; }
-
-  table {
-    padding: 20px 80px; } }
+    letter-spacing: 6px;
+  }
+}
 @media (min-width: 1900px) {
   body {
-    font-size: 18px; } }
+    font-size: 18px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
