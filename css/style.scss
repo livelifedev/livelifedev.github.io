@@ -137,15 +137,15 @@ body::-webkit-scrollbar {
 }
 html {
   scrollbar-width: thin;
-  scrollbar-color: $color1 $color3;
+  scrollbar-color: $color1 $color2;
 }
 body::-webkit-scrollbar-track {
-  background: $color3;
+  background: $color2;
 }
 body::-webkit-scrollbar-thumb {
   background-color: $color1;
   border-radius: 6px;
-  border: 3px solid $color3;
+  border: 3px solid $color2;
 }
 
 /*************** MEDIA QUERIES ***************/

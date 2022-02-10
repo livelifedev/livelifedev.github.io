@@ -127,17 +127,17 @@ body::-webkit-scrollbar {
 
 html {
   scrollbar-width: thin;
-  scrollbar-color: #2666cf #e5e3df;
+  scrollbar-color: #2666cf #151719;
 }
 
 body::-webkit-scrollbar-track {
-  background: #e5e3df;
+  background: #151719;
 }
 
 body::-webkit-scrollbar-thumb {
   background-color: #2666cf;
   border-radius: 6px;
-  border: 3px solid #e5e3df;
+  border: 3px solid #151719;
 }
 
 /*************** MEDIA QUERIES ***************/
