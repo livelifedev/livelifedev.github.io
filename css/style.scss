@@ -131,6 +131,23 @@ p {
   margin-top: 100px;
 }
 
+/* Scrollbar Styles */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+html {
+  scrollbar-width: thin;
+  scrollbar-color: $color1 $color3;
+}
+body::-webkit-scrollbar-track {
+  background: $color3;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: $color1;
+  border-radius: 6px;
+  border: 3px solid $color3;
+}
+
 /*************** MEDIA QUERIES ***************/
 
 @media (max-width: 399px) {
