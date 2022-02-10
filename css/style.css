@@ -15,8 +15,12 @@ body {
 }
 
 section {
-  padding: 100px 0 0 0;
+  padding: 50px 0 0 0;
   margin: 0;
+}
+
+header {
+  margin-bottom: 50px;
 }
 
 .max {
